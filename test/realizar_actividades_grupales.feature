@@ -26,6 +26,10 @@ Característica: Realizar actividades grupales
   Escenario: Cancelar reserva de espacio público
     Dado que el ciudadano tiene una reserva en el Parque la Alameda
     Cuando cancele la reserva
+    Entonces la reserva será eliminada de la agenda pública.
+
+  Escenario: Cancelar reserva privada de espacio público
+    Dado que el ciudadano tiene una reserva en el Parque la Alameda
+    Cuando cancele la reserva
     Entonces la reserva será eliminada
-
-
+    Y se enviará una notificación de cancelación a los invitados.
