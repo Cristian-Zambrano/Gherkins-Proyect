@@ -9,8 +9,8 @@ Característica: Realizar actividades grupales
       | Parque la Alameda |
       | La Carolina       |
       | Bicentenario      |
-    Cuando el ciudadano reserve el "Parque la Alameda" el "Lunes 15 de enero de 2024" de "16:00" a "15:00"
-    Entonces existirá una reserva en el "Parque la Alameda"
+    Cuando el ciudadano reserve e l "Parque_la_Alameda" el "15/01/2025" de "16:00" a "15:00"
+    Entonces existirá una reserva en el "Parque_la_Alameda"
     Y se publicará la reserva en la Agenda Pública.
 
   Escenario: Reserva de un espacio público para una actividad privada
