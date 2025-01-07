@@ -18,10 +18,10 @@ Característica: Realizar actividades grupales
 #    Y se publicará la actividad en la agenda de actividades públicas
 
   Escenario: reserva de espacio disponible para actividad pública
-   Dado que existen espacios públicos en la ciudad y son 
+   Dado que existen espacios públicos disponibles en la ciudad y son 
       | Parque la Alameda |
       | La Carolina |
-       | Bicentenario |
+      | Bicentenario |
    Cuando el ciudadano reserve el Parque la Alameda el Lunes 15 de enero de 2024 de 16:00 a 15:00
    Entonces existirá una reserva en el Parque la Alameda
    Y se publicará la reserva en la Agenda Pública.
