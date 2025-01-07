@@ -21,7 +21,7 @@ def step_impl(context, ):
     assert context.quito.hay_espacios_publicos_disponibles();
 
 
-@step('el ciudadano reserve e l "Parque_la_Alameda" el "15/01/2025" de "16:00" a "15:00"')
+@step('el ciudadano reserve el "Parque_la_Alameda" el "15/01/2025" de "16:00" a "15:00"')
 def step_impl(context):
     """
     :type context: behave.runner.Context
