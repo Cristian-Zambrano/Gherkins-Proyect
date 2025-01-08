@@ -23,6 +23,6 @@ def step_impl(context):
     assert context.reserva.existen_invitados(context.invitados)
 
 
-@step("se enviará una invitación por correo con los detalles de la reserva")
+@step("se enviará una invitación por correo con los detalles de la reserva.")
 def step_impl(context):
     assert context.reserva.enviar_invitacion()

@@ -61,12 +61,15 @@ class Reserva:
         self.hora_fin = hora_fin
         self.invitados = []
 
+    def existen_invitados(self, invitados):
+        return set(invitados) == set(self.invitados)
+
     def agregar_invitados_a_reserva(self, invitados):
         self.invitados = invitados
 
     def enviar_invitacion(self):
         for invitado in self.invitados:
-            remitente = "jormanmate@hotmail.com"
+            remitente = "cristian-13-700@outlook.com"
             destinatario = invitado
             mensaje = self.__str__()
             email = EmailMessage()
@@ -76,7 +79,7 @@ class Reserva:
             email.set_content(mensaje)
             smtp = smtplib.SMTP("smtp-mail.outlook.com", port=587)
             smtp.starttls()
-            smtp.login(remitente, "clave_de_outlook_123")
+            smtp.login(remitente, "FAMILIA123")
             smtp.sendmail(remitente, destinatario, email.as_string())
             smtp.quit()
 
