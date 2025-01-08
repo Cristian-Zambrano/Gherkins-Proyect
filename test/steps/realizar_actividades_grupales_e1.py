@@ -4,7 +4,7 @@ from behave import *
 
 
 @step("que existen espacios públicos disponibles en la ciudad y son")
-def step_impl(context, ):
+def step_impl(context):
     context.quito = Ciudad(Quito)
     context.la_alameda = EspacioPublico(context.table[0])
     context.la_carolina = EspacioPublico(context.table[1])
@@ -21,26 +21,9 @@ def step_impl(context, ):
     assert context.quito.hay_espacios_publicos_disponibles();
 
 
-@step('el ciudadano reserve el "Parque_la_Alameda" el "15/01/2025" de "16:00" a "15:00"')
-def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(
-        u'STEP: Cuando el ciudadano reserve e l "Parque_la_Alameda" el "15/01/2025" de "16:00" a "15:00"')
-
-
-@step('existirá una reserva en el "Parque_la_Alameda"')
-def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: Entonces existirá una reserva en el "Parque_la_Alameda"')
-
 
 @step("se publicará la reserva en la Agenda Pública.")
 def step_impl(context):
-    """
-    :type context: behave.runner.Context
-    """
-    raise NotImplementedError(u'STEP: Y se publicará la reserva en la Agenda Pública.')
+    context.agenda.publicar_reserva(context.reserva)
+
+    assert context.agendaPublica.verificar_la_publicacion_de_la_reserva(context.reserva);

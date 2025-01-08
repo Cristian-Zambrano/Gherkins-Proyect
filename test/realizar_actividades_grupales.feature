@@ -10,8 +10,7 @@ Característica: Realizar actividades grupales
       | La Carolina       |
       | Bicentenario      |
     Cuando el ciudadano reserve el "Parque_la_Alameda" el "15/01/2025" de "16:00" a "15:00"
-    Entonces existirá una reserva en el "Parque_la_Alameda"
-    Y se publicará la reserva en la Agenda Pública.
+    Entonces se publicará la reserva en la Agenda Pública.
 
   Escenario: Reserva de un espacio público para una actividad privada
     Dado que existen espacios públicos disponibles en la ciudad y son
