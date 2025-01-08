@@ -18,6 +18,6 @@ def step_impl(context):
 
 
 
-@step("la reserva será eliminada de la agenda pública\.")
+@step("la reserva será eliminada de la agenda pública.")
 def step_impl(context):
     assert not context.agenda.esta_reserva_en_agenda(context.reserva)
