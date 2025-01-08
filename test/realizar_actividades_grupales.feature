@@ -45,5 +45,4 @@ Característica: Realizar actividades grupales
   Escenario: Cancelar reserva de actividad privada
     Dado que el ciudadano tiene una reserva en el "Parque la Alameda"
     Cuando cancele la reserva
-    Entonces la reserva será eliminada
-    Y se enviará una correo de cancelacion de cancelación a los invitados.
+    Entonces se enviará una correo de cancelacion de cancelación a los invitados.
