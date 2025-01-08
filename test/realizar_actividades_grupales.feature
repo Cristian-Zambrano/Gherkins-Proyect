@@ -22,21 +22,20 @@ Característica: Realizar actividades grupales
 #    Entonces existirá una reserva en el "Parque la Alameda"
 #    Y se enviará una invitación a los invitados con los detalles de la reserva
 
-    Esquema del escenario: Reserva de un espacio público para una actividad privada
+  Esquema del escenario: Reserva de un espacio público para una actividad privada
     Dado que existen espacios públicos disponibles en la ciudad y son
-      | Espacio           |
       | Parque la Alameda |
       | La Carolina       |
       | Bicentenario      |
-    Cuando el ciudadano reserve el "<espacio_publico>" el "<fecha_reserva>" de "<hora_inicio>" a "<hora_fin>"
+    Cuando el ciudadano reserve el "<espacio_publico>" en "<fecha_reserva>" de "<hora_inicio>" a "<hora_fin>"
     Y la reserva tenga como invitados a '<invitados>'
     Entonces se enviará una invitación a los invitados con los detalles de la reserva
 
     Ejemplos:
-      | espacio_reservado | fecha_reserva                        | hora_inicio | hora_fin | invitados                                           |
-      | Parque la Alameda | Lunes 15 de enero de 2024     | 16:00       | 15:00    | jean.cotera@epn.edu, cristian.sangucho@epn.edu.ec   |
-      | La Carolina       | Martes 16 de enero de 2024    | 10:00       | 12:00    | maria.lopez@correo.com, pedro.garcia@gmail.com      |
-      | Bicentenario      | Miércoles 17 de enero de 2024 | 09:00       | 11:30    | ana.martinez@correo.edu.ec, jorge.perez@hotmail.com |
+      | espacio_publico   | fecha_reserva | hora_inicio | hora_fin | invitados                                           |
+      | Parque la Alameda | 15/01/2025    | 16:00       | 15:00    | jean.cotera@epn.edu, cristian.sangucho@epn.edu.ec   |
+      | La Carolina       | 16/01/2025    | 10:00       | 12:00    | maria.lopez@correo.com, pedro.garcia@gmail.com      |
+      | Bicentenario      | 17/0/2025     | 09:00       | 11:30    | ana.martinez@correo.edu.ec, jorge.perez@hotmail.com |
 
 
   Escenario: Cancelar reserva de actividad pública
