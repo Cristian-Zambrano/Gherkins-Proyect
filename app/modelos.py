@@ -36,9 +36,21 @@ class EspacioPublico:
 class Agenda:
     def __init__(self):
         self.reservas = []
+        self.reservas_publicadas: List[Reserva] = []
 
-    def registrar_reserva(self, reserva):
-        self.reservas.append(reserva)
+    def publicar_reserva(self, reserva):
+        self.publicar(reserva)
+        self.reservas_publicadas.append(reserva)
+
+    def publicar(self, reserva):
+        # publicanding...
+        pass
+
+    def verificar_la_publicacion_de_la_reserva(self, reserva):
+        for reserva_publicada in self.reservas_publicadas:
+            if reserva_publicada.equals(reserva):
+                return True
+        return False
 
 
 class Reserva:
