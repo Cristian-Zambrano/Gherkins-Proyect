@@ -1,5 +1,6 @@
 from typing import List
-
+from email.message import EmailMessage
+import smtplib
 import pandas as pd
 
 
@@ -35,18 +36,36 @@ class EspacioPublico:
 class Agenda:
     def __init__(self):
         self.reservas = []
-        self.reservas_publicadas: List[Reserva] = []
 
-    def publicar_reserva(self, reserva):
-        self.publicar(reserva)
-        self.reservas_publicadas.append(reserva)
+    def registrar_reserva(self, reserva):
+        self.reservas.append(reserva)
 
-    def publicar(self, reserva):
-        # publicanding...
-        pass
 
-    def verificar_la_publicacion_de_la_reserva(self, reserva):
-        for reserva_publicada in self.reservas_publicadas:
-            if reserva_publicada.equals(reserva):
-                return True
-        return False
+class Reserva:
+    def __init__(self, espacio_publico, fecha_reserva, hora_inicio, hora_fin):
+        self.espacio_publico = espacio_publico
+        self.fecha_reserva = fecha_reserva
+        self.hora_inicio = hora_inicio
+        self.hora_fin = hora_fin
+        self.invitados = []
+
+    def agregar_invitados_a_reserva(self, invitados):
+        self.invitados = invitados
+
+    def enviar_invitacion(self):
+        for invitado in self.invitados:
+            remitente = "jormanmate@hotmail.com"
+            destinatario = invitado
+            mensaje = self.__str__()
+            email = EmailMessage()
+            email["From"] = remitente
+            email["To"] = destinatario
+            email["Subject"] = "Correo de prueba"
+            email.set_content(mensaje)
+            smtp = smtplib.SMTP("smtp-mail.outlook.com", port=587)
+            smtp.starttls()
+            smtp.login(remitente, "clave_de_outlook_123")
+            smtp.sendmail(remitente, destinatario, email.as_string())
+            smtp.quit()
+
+
