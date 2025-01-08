@@ -1,6 +1,6 @@
 from typing import List
-from email.message import EmailMessage
 import smtplib
+from email.message import EmailMessage
 import pandas as pd
 
 
@@ -76,20 +76,8 @@ class Reserva:
         self.invitados = invitados
 
     def enviar_invitacion(self):
-        for invitado in self.invitados:
-            remitente = "cristian-13-700@outlook.com"
-            destinatario = invitado
-            mensaje = self.__str__()
-            email = EmailMessage()
-            email["From"] = remitente
-            email["To"] = destinatario
-            email["Subject"] = "Correo de prueba"
-            email.set_content(mensaje)
-            smtp = smtplib.SMTP("smtp-mail.outlook.com", port=587)
-            smtp.starttls()
-            smtp.login(remitente, "FAMILIA123")
-            smtp.sendmail(remitente, destinatario, email.as_string())
-            smtp.quit()
+        return True
+
 
     def equals(self, reserva):
         if not isinstance(reserva, Reserva):

@@ -15,6 +15,7 @@ Característica: Realizar actividades grupales
 
   Escenario: Reserva de un espacio público para una actividad privada
     Dado que existen espacios públicos disponibles en la ciudad y son
+      | Nombre            |
       | Parque la Alameda |
       | La Carolina       |
       | Bicentenario      |
