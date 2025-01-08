@@ -91,4 +91,9 @@ class Reserva:
             smtp.sendmail(remitente, destinatario, email.as_string())
             smtp.quit()
 
+    def equals(self, reserva):
+        if not isinstance(reserva, Reserva):
+            return False
+        return self.espacio_publico == reserva.espacio_publico and self.fecha_reserva == reserva.fecha_reserva and self.hora_inicio == reserva.hora_inicio and self.hora_fin == reserva.hora_fin
+
 
