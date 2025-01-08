@@ -52,6 +52,14 @@ class Agenda:
                 return True
         return False
 
+    def registrar_reserva(self, reserva):
+        self.reservas.append(reserva)
+        #TODO ocupar los espacios, modificar sus tiempos, a;adir horarios
+
+    def esta_reserva_en_agenda(self, reserva):
+        if reserva in self.reservas:
+            return True
+
 
 class Reserva:
     def __init__(self, espacio_publico, fecha_reserva, hora_inicio, hora_fin):
