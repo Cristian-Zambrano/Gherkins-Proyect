@@ -24,6 +24,7 @@ def step_impl(context):
 
 @step("se publicará la reserva en la Agenda Pública.")
 def step_impl(context):
+    context.agenda = Agenda()
     context.agenda.publicar_reserva(context.reserva)
-    assert context.agendaPublica.verificar_la_publicacion_de_la_reserva(context.reserva);
+    assert context.agenda.verificar_la_publicacion_de_la_reserva(context.reserva);
 
