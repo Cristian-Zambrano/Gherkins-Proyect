@@ -28,8 +28,7 @@ Característica: Realizar actividades grupales
       | La Carolina       |
       | Bicentenario      |
     Cuando el ciudadano reserve el "<espacio_publico>" en "<fecha_reserva>" de "<hora_inicio>" a "<hora_fin>"
-    Y la reserva tenga como invitados a '<invitados>'
-    Entonces se enviará una invitación a los invitados con los detalles de la reserva
+    Entonces se enviará una invitación por correo a los "<invitados>" con los detalles de la reserva
 
     Ejemplos:
       | espacio_publico   | fecha_reserva | hora_inicio | hora_fin | invitados                                           |
