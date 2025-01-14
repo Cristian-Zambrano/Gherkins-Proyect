@@ -35,3 +35,10 @@ def step_impl(context):
 def step_impl(context):
     # context.agenda.enviar_cancelacion(context.reserva)
     assert context.reserva.enviar_cancelacion()
+
+
+@step("la reserva será eliminada de la agenda pública.")
+def step_impl(context):
+    context.agenda.eliminar_reserva(context.reserva)
+    # assert not context.agenda.existe_reserva(context.reserva)
+    assert not context.agenda.esta_reserva_en_publicacion(context.reserva)

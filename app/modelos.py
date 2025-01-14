@@ -45,6 +45,8 @@ class Agenda:
     def publicar(self, reserva):
         # publicanding...
         pass
+    def esta_reserva_en_publicacion(self, reserva):
+        return reserva in self.reservas_publicadas
 
     def verificar_la_publicacion_de_la_reserva(self, reserva):
         for reserva_publicada in self.reservas_publicadas:
