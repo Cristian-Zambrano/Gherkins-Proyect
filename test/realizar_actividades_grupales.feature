@@ -1,8 +1,8 @@
 #language: es
-Característica: Realizar actividades grupales
-  Como ciudadano
-  Quiero realizar actividades grupales en un espacio pública
-  Para socializar actividades en conjunto con otros ciudadanos
+Característica: Realización actividades por ciudadanos
+  Como entidad publica
+  Quiero que los ciudadanos realicen actividades en mis espacios publicos
+  Para el aprovechamiento de las áreas recreativas.
 
   Escenario: reserva de espacio disponible para actividad pública
     Dado que existen espacios públicos disponibles en la ciudad y son
