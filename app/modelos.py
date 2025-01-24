@@ -4,6 +4,21 @@ from email.message import EmailMessage
 import pandas as pd
 
 
+class Ciudadano:
+    def __init__(self, nombre, cedula):
+        self.nombre = nombre
+        self.cedula = cedula
+        self.reservas = []
+
+    def reservar_espacio_publico(self, espacio_publico):
+        r = Reserva(espacio_publico)
+        self.reservas.append(r)
+        return True
+
+    def anotar_reserva_en_agenda(self, agenda):
+        agenda.anotar_reserva(self.reservas[-1])
+        return
+
 class Ciudad:
     def __init__(self, nombre):
         self.nombre = nombre
@@ -45,6 +60,7 @@ class Agenda:
     def publicar(self, reserva):
         # publicanding...
         pass
+
     def esta_reserva_en_publicacion(self, reserva):
         return reserva in self.reservas_publicadas
 
@@ -56,7 +72,7 @@ class Agenda:
 
     def registrar_reserva(self, reserva):
         self.reservas.append(reserva)
-        #TODO ocupar los espacios, modificar sus tiempos, a;adir horarios
+        # TODO ocupar los espacios, modificar sus tiempos, a;adir horarios
 
     def esta_reserva_en_agenda(self, reserva):
         if reserva in self.reservas:
@@ -80,10 +96,7 @@ class Reserva:
     def enviar_invitacion(self):
         return True
 
-
     def equals(self, reserva):
         if not isinstance(reserva, Reserva):
             return False
         return self.espacio_publico == reserva.espacio_publico and self.fecha_reserva == reserva.fecha_reserva and self.hora_inicio == reserva.hora_inicio and self.hora_fin == reserva.hora_fin
-
-

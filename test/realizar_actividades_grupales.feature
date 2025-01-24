@@ -1,8 +1,9 @@
 #language: es
+  #TODO: Documentar el cambio de este feature
 Característica: Realización actividades por ciudadanos
   Como entidad publica
   Quiero que los ciudadanos realicen actividades en mis espacios publicos
-  Para el aprovechamiento de las áreas recreativas.
+  Para mejorar la convivencia entre los ciudadanos
 
   Escenario: reserva de espacio disponible para actividad pública
     Dado que existen espacios públicos disponibles en la ciudad y son
@@ -10,7 +11,7 @@ Característica: Realización actividades por ciudadanos
       | Parque la Alameda |
       | La Carolina       |
       | Bicentenario      |
-    Cuando el ciudadano reserve el "Parque la Alameda" el "15/01/2024" de "16:00" a "15:00"
+    Cuando el ciudadano reserve el espacio publico "Parque la Alameda" el "15/01/2024" de "16:00" a "15:00"
     Entonces se publicará la reserva en la Agenda Pública.
 
   Escenario: Reserva de un espacio público para una actividad privada
@@ -19,7 +20,7 @@ Característica: Realización actividades por ciudadanos
       | Parque la Alameda |
       | La Carolina       |
       | Bicentenario      |
-    Cuando el ciudadano reserve el "Parque la Alameda" el "15/01/2024" de "16:00" a "15:00"
+    Cuando el ciudadano reserve el espacio publico "Parque la Alameda" el "15/01/2024" de "16:00" a "15:00"
     Y agregue los correos de los invitados "jean.cotera@epn.edu, cristian.sangucho@epn.edu.ec" a la reserva
     Entonces se enviará una invitación por correo con los detalles de la reserva.
 
